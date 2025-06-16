@@ -9,15 +9,16 @@ body {
     sans-serif;
   background: #0a0a0b;
   min-height: 100vh;
-  padding: 20px;
+  padding: 10px;
   color: #ffffff;
+  line-height: 1.4;
 }
 
 .container {
   max-width: 900px;
   margin: 0 auto;
   background: #1a1a1d;
-  border-radius: 24px;
+  border-radius: 20px;
   border: 1px solid #2a2a2f;
   overflow: hidden;
 }
@@ -25,9 +26,10 @@ body {
 .header {
   background: linear-gradient(135deg, #ff4141 0%, #4ecdc4 100%);
   color: white;
-  padding: 40px 30px;
+  padding: 25px 20px;
   position: relative;
   overflow: hidden;
+  text-align: center;
 }
 
 .header::before {
@@ -41,7 +43,7 @@ body {
 }
 
 .header h1 {
-  font-size: 2.8em;
+  font-size: 2.2em;
   margin-bottom: 8px;
   font-weight: 800;
   position: relative;
@@ -50,7 +52,7 @@ body {
 
 .header p {
   opacity: 0.95;
-  font-size: 1.2em;
+  font-size: 1.1em;
   font-weight: 300;
   position: relative;
   z-index: 1;
@@ -58,15 +60,15 @@ body {
 
 .stats {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 24px;
-  padding: 40px 30px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  padding: 20px;
   background: #151518;
 }
 
 .stat-card {
   background: #242429;
-  padding: 24px;
+  padding: 18px 15px;
   border-radius: 16px;
   text-align: center;
   border: 1px solid #2f2f35;
@@ -86,15 +88,15 @@ body {
 }
 
 .stat-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-2px);
   border-color: #4ecdc4;
 }
 
 .stat-number {
-  font-size: 2.4em;
+  font-size: 2em;
   font-weight: 900;
   color: #ffffff;
-  margin-bottom: 8px;
+  margin-bottom: 5px;
   background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -103,12 +105,12 @@ body {
 
 .stat-label {
   color: #9ca3af;
-  font-size: 0.95em;
+  font-size: 0.85em;
   font-weight: 500;
 }
 
 .main-content {
-  padding: 30px;
+  padding: 20px;
   background: #1a1a1d;
 }
 
@@ -116,17 +118,19 @@ body {
   background: linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 100%);
   color: white;
   border: none;
-  padding: 16px 32px;
+  padding: 16px 24px;
   border-radius: 12px;
-  font-size: 1.1em;
+  font-size: 1.05em;
   font-weight: 600;
   cursor: pointer;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   display: flex;
   align-items: center;
-  gap: 12px;
+  justify-content: center;
+  gap: 10px;
   transition: all 0.3s ease;
   border: 1px solid transparent;
+  width: 100%;
 }
 
 .add-habit-btn:hover {
@@ -136,9 +140,9 @@ body {
 
 .habit-form {
   background: #242429;
-  padding: 32px;
+  padding: 25px 20px;
   border-radius: 16px;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   display: none;
   border: 1px solid #2f2f35;
 }
@@ -149,7 +153,7 @@ body {
 
 .form-row {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 15px;
   margin-bottom: 15px;
 }
@@ -163,7 +167,7 @@ body {
   margin-bottom: 8px;
   font-weight: 600;
   color: #ffffff;
-  font-size: 0.95em;
+  font-size: 0.9em;
 }
 
 .form-group input,
@@ -198,12 +202,14 @@ body {
 }
 
 .btn {
-  padding: 12px 20px;
+  padding: 14px 20px;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
   font-size: 1em;
   transition: all 0.2s;
+  flex: 1;
+  font-weight: 600;
 }
 
 .btn-primary {
@@ -232,14 +238,14 @@ body {
 
 .habits-grid {
   display: grid;
-  gap: 20px;
+  gap: 15px;
 }
 
 .habit-card {
   background: #242429;
   border: 1px solid #2f2f35;
   border-radius: 16px;
-  padding: 24px;
+  padding: 20px;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -259,8 +265,8 @@ body {
 
 .habit-card:hover {
   border-color: #4ecdc4;
-  transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
 .habit-card:hover::before {
@@ -282,20 +288,22 @@ body {
   justify-content: space-between;
   align-items: flex-start;
   margin-bottom: 15px;
+  gap: 10px;
 }
 
 .habit-name {
-  font-size: 1.4em;
+  font-size: 1.3em;
   font-weight: 700;
   color: #ffffff;
   margin-bottom: 8px;
+  line-height: 1.3;
 }
 
 .habit-category {
   display: inline-block;
-  padding: 6px 14px;
+  padding: 5px 12px;
   border-radius: 20px;
-  font-size: 0.8em;
+  font-size: 0.75em;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -325,22 +333,28 @@ body {
   border: 1px solid rgba(236, 72, 153, 0.2);
 }
 
+.category-wellness {
+  background: rgba(139, 92, 246, 0.1);
+  color: #a78bfa;
+  border: 1px solid rgba(139, 92, 246, 0.2);
+}
+
 .habit-details {
   margin: 15px 0;
 }
 
 .habit-detail {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   margin-bottom: 10px;
-  font-size: 0.95em;
+  font-size: 0.9em;
   color: #9ca3af;
 }
 
 .habit-detail strong {
-  margin-right: 10px;
   color: #ffffff;
   font-weight: 600;
+  margin-bottom: 3px;
 }
 
 .habit-actions {
@@ -348,10 +362,11 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-top: 20px;
+  gap: 15px;
 }
 
 .complete-btn {
-  padding: 12px 24px;
+  padding: 12px 20px;
   border: none;
   border-radius: 10px;
   cursor: pointer;
@@ -359,8 +374,11 @@ body {
   transition: all 0.3s ease;
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-size: 0.95em;
+  justify-content: center;
+  gap: 8px;
+  font-size: 0.9em;
+  flex: 1;
+  min-width: 120px;
 }
 
 .complete-btn.completed {
@@ -383,24 +401,47 @@ body {
 .streak-display {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   font-weight: 700;
   color: #f59e0b;
-  font-size: 1em;
+  font-size: 0.9em;
+  flex-shrink: 0;
+}
+
+.delete-btn {
+  background: rgba(239, 68, 68, 0.1);
+  color: #f87171;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  padding: 8px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  font-size: 18px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.delete-btn:hover {
+  background: rgba(239, 68, 68, 0.2);
 }
 
 .four-laws {
   background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
   color: white;
-  padding: 40px 30px;
-  margin: 30px -30px -30px -30px;
+  padding: 30px 20px;
+  margin: 25px -20px -20px -20px;
   border-top: 1px solid #2f2f35;
 }
 
 .four-laws h3 {
   text-align: center;
-  margin-bottom: 32px;
-  font-size: 1.8em;
+  margin-bottom: 25px;
+  font-size: 1.6em;
   font-weight: 800;
   background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
   -webkit-background-clip: text;
@@ -410,13 +451,13 @@ body {
 
 .laws-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 24px;
+  grid-template-columns: 1fr;
+  gap: 20px;
 }
 
 .law-card {
   background: rgba(255, 255, 255, 0.05);
-  padding: 28px 24px;
+  padding: 25px 20px;
   border-radius: 16px;
   text-align: center;
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -425,15 +466,15 @@ body {
 }
 
 .law-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-2px);
   border-color: rgba(78, 205, 196, 0.3);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
 .law-number {
-  font-size: 2.4em;
+  font-size: 2.2em;
   font-weight: 900;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -442,39 +483,39 @@ body {
 
 .law-title {
   font-weight: 700;
-  margin-bottom: 10px;
-  font-size: 1.1em;
+  margin-bottom: 8px;
+  font-size: 1.05em;
 }
 
 .law-card div:last-child {
   color: #9ca3af;
-  font-size: 0.95em;
-  line-height: 1.5;
+  font-size: 0.9em;
+  line-height: 1.4;
 }
 
 .empty-state {
   text-align: center;
-  padding: 80px 20px;
+  padding: 60px 20px;
   color: #6b7280;
 }
 
 .empty-state h3 {
   margin-bottom: 12px;
   color: #ffffff;
-  font-size: 1.4em;
+  font-size: 1.3em;
   font-weight: 700;
 }
 
 .empty-state p {
-  font-size: 1.05em;
+  font-size: 1em;
+  line-height: 1.5;
 }
 
-/* New styles for progress bar and identity */
 .progress-bar-container {
   width: 100%;
   background-color: #2f2f35;
   border-radius: 10px;
-  height: 8px;
+  height: 6px;
   margin-top: 15px;
   overflow: hidden;
 }
@@ -489,9 +530,9 @@ body {
 
 .identity-statement {
   background: #242429;
-  padding: 24px;
+  padding: 20px;
   border-radius: 16px;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   border: 1px solid #2f2f35;
 }
 
@@ -512,8 +553,9 @@ body {
   transition: all 0.2s ease;
   background: #1a1a1d;
   color: #ffffff;
-  min-height: 60px;
+  min-height: 150px;
   resize: vertical;
+  line-height: 1.5;
 }
 
 .identity-statement textarea:focus {
@@ -524,10 +566,143 @@ body {
 
 .identity-statement button {
   margin-top: 15px;
+  width: 100%;
 }
 
-@media (max-width: 768px) {
+.identity-display {
+  background: #1a1a1d;
+  padding: 16px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  border: 1px solid #2f2f35;
+  color: #e5e7eb;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+/* Tablet optimizations */
+@media (min-width: 768px) {
+  body {
+    padding: 20px;
+  }
+
+  .header {
+    padding: 35px 25px;
+  }
+
+  .header h1 {
+    font-size: 2.6em;
+  }
+
+  .stats {
+    grid-template-columns: repeat(4, 1fr);
+    padding: 30px 25px;
+  }
+
+  .main-content {
+    padding: 25px;
+  }
+
   .form-row {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .laws-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .four-laws {
+    margin: 30px -25px -25px -25px;
+    padding: 35px 25px;
+  }
+}
+
+/* Large tablet/small desktop */
+@media (min-width: 1024px) {
+  .laws-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Mobile-specific optimizations */
+@media (max-width: 480px) {
+  body {
+    padding: 5px;
+  }
+
+  .container {
+    border-radius: 16px;
+  }
+
+  .header {
+    padding: 20px 15px;
+  }
+
+  .header h1 {
+    font-size: 1.9em;
+  }
+
+  .header p {
+    font-size: 1em;
+  }
+
+  .stats {
+    padding: 15px;
+    gap: 12px;
+  }
+
+  .stat-card {
+    padding: 15px 12px;
+  }
+
+  .stat-number {
+    font-size: 1.8em;
+  }
+
+  .stat-label {
+    font-size: 0.8em;
+  }
+
+  .main-content {
+    padding: 15px;
+  }
+
+  .habit-form {
+    padding: 20px 15px;
+  }
+
+  .habit-card {
+    padding: 16px;
+  }
+
+  .habit-name {
+    font-size: 1.2em;
+  }
+
+  .habit-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .complete-btn {
+    width: 100%;
+  }
+
+  .streak-display {
+    align-self: center;
+    justify-content: center;
+  }
+
+  .four-laws {
+    margin: 20px -15px -15px -15px;
+    padding: 25px 15px;
+  }
+
+  .four-laws h3 {
+    font-size: 1.4em;
+  }
+
+  .law-card {
+    padding: 20px 15px;
   }
 }
